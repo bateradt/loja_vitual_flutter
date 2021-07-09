@@ -7,6 +7,11 @@ class HomeTab extends StatelessWidget {
   Future getImagesFromHome() {
     var future =
         FirebaseFirestore.instance.collection("home").orderBy("pos").get();
+
+    // var future2 = FirebaseFirestore.instance.collection("products").orderBy("title").get();
+    //
+    // print("Products");
+    // future2.then((value) => print(value.docs));
     return future;
   }
 
